@@ -209,6 +209,7 @@ class MainActivity : AppCompatActivity() {
 
             addView(TextView(this@MainActivity).apply {
                 text = "My COC"
+                gravity = Gravity.CENTER
                 setTextColor(Color.parseColor("#FACC15"))
                 textSize = 26f
                 setTypeface(null, Typeface.BOLD)
