@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                         webViewClient = object : WebViewClient() {
                             override fun shouldOverrideUrlLoading(v: WebView?, req: WebResourceRequest?): Boolean {
                                 val u = req?.url?.toString() ?: ""
-                                if (u.startsWith("https://coc.rafsanjani.top")) {
+                                if (u.startsWith("https://coc.rafsanjani.top/?app=1")) {
                                     CookieManager.getInstance().flush()
                                     dialog.dismiss()
                                     webView.loadUrl(u)
@@ -226,7 +226,7 @@ class MainActivity : AppCompatActivity() {
         root.addView(splashLayout)
         setContentView(root)
 
-        webView.loadUrl("https://coc.rafsanjani.top")
+        webView.loadUrl("https://coc.rafsanjani.top/?app=1")
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
